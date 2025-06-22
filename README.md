@@ -45,7 +45,7 @@ This Power BI dashboard provides a centralized interface for QA engineers to val
   <img src="sample-screenshots/dashboard-overview.png" alt="Dashboard Overview" width="700"/>
 </p>
 
-**Anonymized data used for confidentiality.*
+*Anonymized data used for confidentiality.*
 
 ### 🗄️ Step 2: Data Extraction Using SQL  
 To retrieve lot-level data, I used **SQL** to pull and consolidate records from **Teradata** tables. The logic includes conditional handling and regex to extract valid lot numbers from various fields.
@@ -77,7 +77,7 @@ Below is an example scenario where a lot is marked as "Pass" or "Fail" based on 
   <img src="sample-screenshots/sample-scenario.png" alt="Sample Scenario" width="700"/>
 </p>
 
-**Example demonstrating dynamic decision logic using integrated backend statuses.*
+*Example demonstrating dynamic decision logic using integrated backend statuses.*
 
 ---
 
