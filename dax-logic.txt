@@ -12,7 +12,7 @@ VAR FailCount =
 
 VAR MDRFail =
     CONCATENATEX(
-        FILTER('Combined', [MDR Status] IN {"Created", "In Draft", "Pending"}),
+        FILTER('Combined', [MDR Status] IN {"Created", "In Draft", "Pending Approval"}),
         [MDR Status],
         " & "
     )
