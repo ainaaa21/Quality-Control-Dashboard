@@ -55,7 +55,7 @@ To retrieve lot-level data, I used **SQL** to pull and consolidate records from 
 </p>
 
 *Sample of the SQL logic used to retrieve and standardize lot data across systems.*  
-🔗 [View full SQL logic →](sql-query.sql)
+🔗 [View full SQL logic](sql-query.sql)
 
 ---
 
@@ -67,7 +67,7 @@ Once the data was loaded into Power BI, I established relationships between rele
 </p>
 
 *Snippet above shows a DAX measure that determines lot status based on MDR and I8D conditions.*  
-🔗 [View full DAX logic →](dax-logic.txt)
+🔗 [View full DAX logic](dax-logic.txt)
 
 ### ✅ Step 4: Pass/Fail Scenario Example  
 Below is an example scenario where a lot is marked as "Pass" or "Fail" based on backend logic. Visual cues enable the QA team to act quickly and confidently.
@@ -84,16 +84,16 @@ Below is an example scenario where a lot is marked as "Pass" or "Fail" based on 
 
 ## 🔍 Key Features
 
-- ✅ Lot-level pass/fail decision logic using DAX
-- 🔎 Drill-down capability into MDR, IBD, and CMT status
-- 🧠 Visual indicators for QA personnel to act quickly
+- 🧠 Automated Lot Evaluation Logic
+- 📊 Centralized QA Dashboard
+- ✂️ Reduced Manual QA Checks
 - 🔄 Ready for scheduled refresh (via gateway, internal setup)
 
 ---
 
 ## 📈 Impact
 
-This dashboard reduced manual checking steps by ~20% and helped QA teams make faster, more accurate decisions before product release.
+This dashboard reduced manual checking steps by ~30% and helped QA teams make faster, more accurate decisions before product release.
 
 ---
 
