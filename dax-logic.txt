@@ -1,0 +1,49 @@
+Lot Status Info =
+VAR TotalLots = COUNTROWS(VALUES('Combined'))
+
+VAR PassCount =
+    CALCULATE(
+        COUNTROWS('Combined'),
+        'Combined'[Lot Status] = "Pass"
+    )
+
+VAR FailCount =
+    TotalLots - PassCount
+
+VAR MDRFail =
+    CONCATENATEX(
+        FILTER('Combined', [MDR Status] IN {"New", "Form Team", "In Work", "Team Signoff"}),
+        [MDR Status],
+        " & "
+    )
+
+VAR I8DFail =
+    CONCATENATEX(
+        FILTER('Combined', [I8D Status] IN {"New", "In Progress"}),
+        [I8D Status],
+        " & "
+    )
+
+RETURN
+    IF(
+        ISFILTERED('Combined'[Lot ID Info]),
+        SWITCH(
+            TRUE(),
+            TotalLots = 0,
+                "Pass – No MDR/I8D found for this lot number",
+            PassCount = TotalLots,
+                "This lot pass to ship",
+            FailCount > 0,
+                SWITCH(
+                    TRUE(),
+                    MDRFail <> "" && I8DFail = "",
+                        "This lot fail due to MDR Status: " & MDRFail,
+                    I8DFail <> "" && MDRFail = "",
+                        "This lot fail due to I8D Status: " & I8DFail,
+                    MDRFail <> "" && I8DFail <> "",
+                        "This lot fail due to MDR Status: " & MDRFail & " and I8D Status: " & I8DFail,
+                    "This lot fail"
+                ),
+            "This lot fail"
+        )
+    )
