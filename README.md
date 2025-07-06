@@ -7,6 +7,12 @@ Using **SQL**, I extracted production data from an on-premise **Teradata** wareh
 
 ---
 
+## 🔐 Confidentiality Note
+
+*This project was completed during my internship. All data has been recreated or anonymized to protect confidentiality. The logic and visuals shown reflect the real design and decision flow implemented.*
+
+---
+
 ## 🎯 Problem Statement
 
 QA engineers needed to verify lot readiness by checking status across **3 different systems** (MDR, IBD, and CMT), leading to:
@@ -94,12 +100,6 @@ Below is an example scenario where a lot is marked as "Pass" or "Fail" based on 
 ## 📈 Impact
 
 This dashboard reduced manual checking steps by ~30% and helped QA teams make faster, more accurate decisions before product release.
-
----
-
-## 🔐 Confidentiality Note
-
-*This project was completed during my internship. All data has been recreated or anonymized to protect confidentiality. The logic and visuals shown reflect the real design and decision flow implemented.*
 
 ---
 
