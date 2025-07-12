@@ -15,7 +15,7 @@ Using **SQL**, I extracted production data from an on-premise **Teradata** wareh
 
 ## 🎯 Problem Statement
 
-QA engineers needed to verify lot readiness by checking status across **3 different systems** (MDR, IBD, and CMT), leading to:
+QA engineers needed to verify lot readiness by checking status across **3 different systems** (MDR, I8D, and CMT), leading to:
 - Delays in lot approval and shipment
 - Inconsistent decision-making due to manual tracking
 - Risk of human error in critical quality checks
