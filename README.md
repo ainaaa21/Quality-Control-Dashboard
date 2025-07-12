@@ -1,20 +1,18 @@
 # 📋 Quality Control Dashboard (Power BI)
 
 ## 📌 Overview
-During my internship, I built this dashboard to streamline the **lot-status verification** process for the Quality Assurance (QA) team.  QA engineers previously cross-checked multiple internal systems for every production lot—a manual, time-consuming, and error-prone task.
+I built this dashboard to streamline the **lot-status verification** process for the Quality Assurance (QA) team. QA engineers previously cross-checked multiple internal systems for every production lot—a manual, time-consuming, and error-prone task.
 
 Using **SQL**, I extracted production data from an on-premise **Teradata** warehouse, and **imported multidimensional data directly from SQL Server Analysis Services (SSAS)** into Power BI. The result was a centralized, interactive report that enabled faster and more reliable decisions at the QA gate.
 
 ---
 
 ## 🔐 Confidentiality Note
-
-*This project was completed during my internship. All data has been recreated or anonymized to protect confidentiality. The logic and visuals shown reflect the real design and decision flow implemented.*
+*All data has been recreated or anonymized to protect company data confidentiality. The logic and visuals shown reflect the real design and decision flow implemented.*
 
 ---
 
 ## 🎯 Problem Statement
-
 QA engineers needed to verify lot readiness by checking status across **3 different systems** (MDR, I8D, and CMT), leading to:
 - Delays in lot approval and shipment
 - Inconsistent decision-making due to manual tracking
@@ -23,11 +21,11 @@ QA engineers needed to verify lot readiness by checking status across **3 differ
 ---
 
 ## ✅ Solution
-The **E-QC Dashboard** addresses these issues by:  
-- 📥 **Combining** data from Teradata (via SQL) and SSAS (via direct import)  
-- ⚙️ Applying **automated DAX logic** to classify lot status (pass / fail)  
-- 🧭 Providing a **single interface** for real-time QA review  
-- 🟢 **Eliminating** multiple manual system checks  
+The **E-QC Dashboard** addresses these issues by:
+- 📥 **Combining** data from Teradata (via SQL) and SSAS (via direct import)
+- ⚙️ Applying **automated DAX logic** to classify lot status (pass / fail)
+- 🧭 Providing a **single interface** for real-time QA review
+- 🟢 **Eliminating** multiple manual system checks
 
 ---
 
@@ -44,7 +42,7 @@ The **E-QC Dashboard** addresses these issues by:
 
 ## 🧭 Project Walkthrough
 
-### 🔍 Step 1: Dashboard Preview  
+### 🔍 Step 1: Dashboard Preview
 This Power BI dashboard provides a centralized interface for QA engineers to validate production lot status across MDR, I8D, and CMT systems.
 
 <p align="center">
@@ -53,7 +51,9 @@ This Power BI dashboard provides a centralized interface for QA engineers to val
 
 *Anonymized data used for confidentiality.*
 
-### 🗄️ Step 2: Data Extraction Using SQL  
+---
+
+### 🗄️ Step 2: Data Extraction Using SQL
 To retrieve lot-level data, I used **SQL** to pull and consolidate records from **Teradata** tables. The logic includes conditional handling and regex to extract valid lot numbers from various fields.
 
 <p align="center">
@@ -65,7 +65,7 @@ To retrieve lot-level data, I used **SQL** to pull and consolidate records from 
 
 ---
 
-### 🧠 Step 3: Business Logic with DAX  
+### 🧠 Step 3: Business Logic with DAX
 Once the data was loaded into Power BI, I established relationships between relevant tables. Then, using **DAX**, I built logic to automate the pass/fail decision process based on status fields from connected systems — ensuring real-time, consistent evaluations.
 
 <p align="center">
@@ -75,9 +75,10 @@ Once the data was loaded into Power BI, I established relationships between rele
 *Snippet above shows a DAX measure that determines lot status based on MDR and I8D conditions.*  
 🔗 [View full DAX logic](dax-logic.txt)
 
-### ✅ Step 4: Pass/Fail Scenario Example  
-Below is an example scenario where a lot is marked as "Pass" or "Fail" based on backend logic. Visual cues enable the QA team to act quickly and confidently.
+---
 
+### ✅ Step 4: Pass/Fail Scenario Example
+Below is an example scenario where a lot is marked as "Pass" or "Fail" based on backend logic. Visual cues enable the QA team to act quickly and confidently.
 
 <p align="center">
   <img src="sample-screenshots/sample-scenario.png" alt="Sample Scenario" width="700"/>
@@ -86,7 +87,6 @@ Below is an example scenario where a lot is marked as "Pass" or "Fail" based on 
 *Example demonstrating dynamic decision logic using integrated backend statuses.*
 
 ---
-
 
 ## 🔍 Key Features
 
@@ -98,13 +98,14 @@ Below is an example scenario where a lot is marked as "Pass" or "Fail" based on 
 ---
 
 ## 📈 Impact
-
-This dashboard reduced manual checking steps by ~30% and helped QA teams make faster, more accurate decisions before product release.
+- Reduced manual verification steps by ~30%
+- Enabled faster, more accurate QA decisions
+- Unified multiple system checks into one interface
+- Improved consistency in lot evaluation process
 
 ---
 
 ## 🙋‍♀️ About Me
-
 I’m a Computer Science graduate passionate about **data analytics and automation**. I use tools like Power BI, SQL, and Python to turn raw data into insights and help businesses make better decisions.
 
-[🔗 LinkedIn](https://www.linkedin.com/in/ainamardhiah2107/) 
+[🔗 LinkedIn](https://www.linkedin.com/in/ainamardhiah2107/)
