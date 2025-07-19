@@ -8,7 +8,7 @@ Using **SQL**, I extracted production data from an on-premise **Teradata** wareh
 ---
 
 ## 🔐 Confidentiality Note
-*All data has been recreated or anonymized to protect company data confidentiality. The logic and visuals shown reflect the real design and decision flow implemented.*
+*All data in this dashboard has been recreated or anonymized to protect company confidentiality. The sample reflects only the data logic and structure used in the actual project.*
 
 ---
 
